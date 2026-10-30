@@ -1,0 +1,241 @@
+{
+ "_nota": "Reguli de linkuri automate (aiventure-glosar v1.2). Țintele rețelei sunt paginile principale (verificate 200 la 30 oct 2026). Glosarul este în română: linkurile către glosar se aplică doar domeniilor cu lang=ro.",
+ "limite": {
+  "glosar": 8,
+  "retea": 3
+ },
+ "domenii": {
+  "b2b-ai-library.org": {
+   "lang": "en",
+   "glosar": false,
+   "retea": true
+  },
+  "3webobs.com": {
+   "lang": "en",
+   "glosar": false,
+   "retea": true
+  },
+  "ai-lens.eu": {
+   "lang": "en",
+   "glosar": false,
+   "retea": true
+  },
+  "5thelement.ai": {
+   "lang": "en",
+   "glosar": false,
+   "retea": true
+  },
+  "aiventure.ro": {
+   "lang": "ro",
+   "glosar": true,
+   "retea": true
+  }
+ },
+ "exclude_cai": [
+  "/glosar/",
+  "/dictionar/",
+  "/legal/",
+  "/api/",
+  "/functions/"
+ ],
+ "glosar": [
+  {
+   "t": "CUI",
+   "a": "c-cui"
+  },
+  {
+   "t": "EUID",
+   "a": "c-euid"
+  },
+  {
+   "t": "CAEN",
+   "a": "c-cod-caen"
+  },
+  {
+   "t": "ONRC",
+   "a": "c-onrc"
+  },
+  {
+   "t": "ANAF",
+   "a": "c-anaf"
+  },
+  {
+   "t": "data.gov.ro",
+   "a": "c-data-gov-ro"
+  },
+  {
+   "t": "OGL-ROU-1.0",
+   "a": "c-ogl-rou-1-0"
+  },
+  {
+   "t": "SHA-256",
+   "a": "c-sha-256"
+  },
+  {
+   "t": "OpenTimestamps",
+   "a": "c-opentimestamps"
+  },
+  {
+   "t": "JSON-LD",
+   "a": "c-json-ld"
+  },
+  {
+   "t": "GEO",
+   "a": "c-geo"
+  },
+  {
+   "t": "AEO",
+   "a": "c-aeo"
+  },
+  {
+   "t": "AIO",
+   "a": "c-aio"
+  },
+  {
+   "t": "A2A",
+   "a": "c-a2a"
+  },
+  {
+   "t": "MCP",
+   "a": "c-mcp"
+  },
+  {
+   "t": "RAG",
+   "a": "c-rag"
+  },
+  {
+   "t": "HITL",
+   "a": "c-hitl"
+  },
+  {
+   "t": "RRVI",
+   "a": "c-rrvi"
+  },
+  {
+   "t": "AI-LENS",
+   "a": "c-ai-lens"
+  },
+  {
+   "t": "3WEBOBS",
+   "a": "c-3webobs"
+  },
+  {
+   "t": "INJECTOR",
+   "a": "c-injector"
+  },
+  {
+   "t": "Knowledge Graph",
+   "a": "c-knowledge-graph"
+  },
+  {
+   "t": "Vector Search",
+   "a": "c-vector-search"
+  },
+  {
+   "t": "Vectorize",
+   "a": "c-vectorize"
+  },
+  {
+   "t": "R2",
+   "a": "c-r2"
+  },
+  {
+   "t": "D1",
+   "a": "c-d1"
+  },
+  {
+   "t": "cardinalitate",
+   "a": "c-cardinalitate"
+  },
+  {
+   "t": "cardinalități",
+   "a": "c-cardinalitate"
+  },
+  {
+   "t": "Cardinalitate",
+   "a": "c-cardinalitate"
+  },
+  {
+   "t": "economic twins",
+   "a": "c-economic-twins"
+  },
+  {
+   "t": "Economic twins",
+   "a": "c-economic-twins"
+  },
+  {
+   "t": "dicționar de date",
+   "a": "c-dictionar-de-date"
+  },
+  {
+   "t": "Dicționar de date",
+   "a": "c-dictionar-de-date"
+  },
+  {
+   "t": "bilanț",
+   "a": "c-bilant"
+  },
+  {
+   "t": "bilanțuri",
+   "a": "c-bilant"
+  },
+  {
+   "t": "bilanțul",
+   "a": "c-bilant"
+  },
+  {
+   "t": "PFA",
+   "a": "c-persoane-fizice"
+  },
+  {
+   "t": "Manifest",
+   "a": "c-manifest"
+  },
+  {
+   "t": "manifest",
+   "a": "c-manifest"
+  }
+ ],
+ "retea": [
+  {
+   "t": "AI-LENS",
+   "d": "ai-lens.eu",
+   "u": "https://ai-lens.eu/"
+  },
+  {
+   "t": "3WEBOBS",
+   "d": "3webobs.com",
+   "u": "https://3webobs.com/"
+  },
+  {
+   "t": "AI-READY INJECTOR",
+   "d": "aireadyinjector.com",
+   "u": "https://aireadyinjector.com/"
+  },
+  {
+   "t": "EU AI Act Ready",
+   "d": "eu-ai-act-ready.eu",
+   "u": "https://eu-ai-act-ready.eu/"
+  },
+  {
+   "t": "FirmsFinder",
+   "d": "firmsfinder.eu",
+   "u": "https://firmsfinder.eu/"
+  },
+  {
+   "t": "FirmsFinder AI",
+   "d": "firmsfinder.eu",
+   "u": "https://firmsfinder.eu/"
+  },
+  {
+   "t": "EU AI Audit",
+   "d": "eu-ai-audit.eu",
+   "u": "https://eu-ai-audit.eu/"
+  },
+  {
+   "t": "B2B AI Library",
+   "d": "b2b-ai-library.org",
+   "u": "https://b2b-ai-library.org/"
+  }
+ ]
+}

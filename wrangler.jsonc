@@ -6,6 +6,8 @@
   "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
   // Faza 2 (30 oct 2026): b2b-ai-library.org (testat), 3webobs.com, ai-lens.eu, aiventure.ro, 5thelement.ai. Restul rețelei se adaugă pe rând.
   "routes": [
+    // Faza 3 (test linkuri automate): toate paginile doar pe b2b-ai-library.org
+    { "pattern": "b2b-ai-library.org/*", "zone_name": "b2b-ai-library.org" },
     { "pattern": "b2b-ai-library.org/glosar*", "zone_name": "b2b-ai-library.org" },
     { "pattern": "b2b-ai-library.org/dictionar*", "zone_name": "b2b-ai-library.org" },
     { "pattern": "3webobs.com/glosar*", "zone_name": "3webobs.com" },
