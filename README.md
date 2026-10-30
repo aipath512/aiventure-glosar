@@ -1,11 +1,14 @@
 # aiventure-glosar
 
-Sursă unică pentru dicționarul de date și glosarul comun al rețelei de site-uri AiVenture.
+Worker + sursă unică pentru **dicționarul de date** și **glosarul** comune rețelei de site-uri AiVenture.
+Servește `/glosar/` și `/dictionar/` pe fiecare domeniu din rețea, din aceleași fișiere.
 
-- `dictionar/` — dicționarul de date înghețat pe versiune (JSON, MD, SHA256SUMS, dovezi OpenTimestamps, `latest.json`), plus `context/`.
-- `sesiuni/registru-sesiuni.json` — legătura dintre sesiune, versiune, amprentă și dovadă.
-- `generator/` — scripturile care produc paginile `/glosar/` și `/dictionar/` din JSON (în curs de adaptare la domeniu/limbă).
-- `worker/` — Workerul `aiventure-glosar-worker` (de scris): servește `/glosar/` și `/dictionar/` pe fiecare domeniu din KV și leagă termenii la edge.
+- `public/` — paginile autonome (șabloane cu `%%ORIGIN%%` și `%%DOMAIN%%`), dicționarul înghețat (JSON, MD, SHA256SUMS, dovezi `.ots`, `latest.json`) și contextul public.
+- `worker/index.js` — Workerul (v1.0). `worker/test.mjs` — test local (`node worker/test.mjs`).
+- `wrangler.jsonc` — numele Workerului (`aiventure-glosar`) și rutele. **Faza 1: doar b2b-ai-library.org**; celelalte domenii se adaugă pe rând.
+- `dictionar/`, `sesiuni/` — sursa înghețată (nu se modifică; o schimbare = versiune nouă cu SHA-256 și OTS).
+- `generator/` — scripturile care produc paginile. `build_standalone.py` reface `public/` din paginile etalon de pe firmsfinder.eu.
 
-Etalon: https://firmsfinder.eu/glosar/ și https://firmsfinder.eu/dictionar/
-Sesiune: 0008C · 2026-10-30
+Rutele sunt pe căi (`domeniu/glosar*`, `domeniu/dictionar*`), deci nu intră în conflict cu Workerii care au rute `domeniu/*`.
+
+Etalon: https://firmsfinder.eu/glosar/ · https://firmsfinder.eu/dictionar/ · Sesiune 0008C · 2026-10-30

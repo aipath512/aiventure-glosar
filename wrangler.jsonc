@@ -1,0 +1,12 @@
+{
+  // aiventure-glosar v1.0 — Worker pentru /glosar/ și /dictionar/ pe domeniile rețelei AiVenture
+  "name": "aiventure-glosar",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
+  // Faza 1 (test): doar b2b-ai-library.org. Domeniile se adaugă pe rând, după ce testul trece.
+  "routes": [
+    { "pattern": "b2b-ai-library.org/glosar*", "zone_name": "b2b-ai-library.org" },
+    { "pattern": "b2b-ai-library.org/dictionar*", "zone_name": "b2b-ai-library.org" }
+  ]
+}

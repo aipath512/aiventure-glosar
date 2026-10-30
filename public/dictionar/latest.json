@@ -1,0 +1,25 @@
+{
+  "dictionar": "Dicționar de date economice ale firmelor (FirmsFinder)",
+  "versiune": "1.0.2",
+  "sesiune": "0008H",
+  "inghetata_la": "2026-10-29T18:32:59+02:00",
+  "fisiere": [
+    {
+      "url": "https://firmsfinder.eu/dictionar/dictionar-economic-firme_v1.0.2_2026-10-29.json",
+      "sha256": "0fb8e5cac4a95065d18d86cf106ead4bf71b2878824827a2162260630466680e",
+      "ots": "https://firmsfinder.eu/dictionar/dictionar-economic-firme_v1.0.2_2026-10-29.json.ots"
+    },
+    {
+      "url": "https://firmsfinder.eu/dictionar/dictionar-economic-firme_v1.0.2_2026-10-29.md",
+      "sha256": "af8e66f209c8c6706417ceee69346ad5142ddae5b5c608d4e1d2220441d20a2c",
+      "ots": "https://firmsfinder.eu/dictionar/dictionar-economic-firme_v1.0.2_2026-10-29.md.ots"
+    },
+    {
+      "url": "https://firmsfinder.eu/dictionar/SHA256SUMS_v1.0.2_2026-10-29.txt",
+      "sha256": "9a55bdc97e04f31c4a147e4f6dfc40f7931bb3da906151fa2771d02bf7b95cd1",
+      "ots": "https://firmsfinder.eu/dictionar/SHA256SUMS_v1.0.2_2026-10-29.txt.ots"
+    }
+  ],
+  "registru": "https://firmsfinder.eu/sesiuni/registru-sesiuni.json",
+  "nota": "Pointer mutabil, rescris la fiecare înghețare. Integritatea se verifică cu sha256; starea ștampilei OTS este în registru."
+}
