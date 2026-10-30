@@ -40,7 +40,7 @@ def build(src,path,title,desc):
       +main+'<footer><small>AiVenture S.R.L. · pagină servită pe %%DOMAIN%% · <a href="https://firmsfinder.eu/dictionar/">dicționar</a> · <a href="https://firmsfinder.eu/glosar/">glosar</a></small></footer></main></body></html>')
     os.makedirs(f'{OUT}/{path}',exist_ok=True)
     open(f'{OUT}/{path}/index.html','w',encoding='utf-8').write(head+body)
-t=lambda f: re.search(r'<title>(.*?)</title>',open(FF+'/'+f+'/index.html',encoding='utf-8').read()).group(1)
+t=lambda f: re.search(r'<title>(.*?)</title>',open(FF+'/'+f+'/index.html',encoding='utf-8').read()).group(1).replace('| FirmsFinder AI','| AiVenture')
 d=lambda f: re.search(r'<meta name="description" content="(.*?)"',open(FF+'/'+f+'/index.html',encoding='utf-8').read()).group(1)
 build('glosar','glosar',t('glosar'),d('glosar'))
 build('dictionar','dictionar',t('dictionar'),d('dictionar'))
