@@ -10,7 +10,9 @@ const PAGES = ['/glosar/', '/dictionar/'];
 
 // Trece cererea spre origine și, pe paginile HTML ale domeniilor din legaturi.json, adaugă linkurile automate.
 async function passthrough(request, url) {
-  const res = await fetch(request);
+  const res0 = await fetch(request);
+  const res = new Response(res0.body, res0);
+  res.headers.set('x-aiventure-edge', '1.2'); // semn că ruta /* trece prin acest Worker
   try {
     if (request.method !== 'GET' || res.status !== 200) return res;
     const ct = res.headers.get('content-type') || '';
