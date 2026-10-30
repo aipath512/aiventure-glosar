@@ -1,4 +1,4 @@
-// aiventure-glosar v1.0 (2026-10-30, sesiunea 0008C)
+// aiventure-glosar v1.1 (2026-10-30, sesiunea 0008C) — v1.1: corectat redirect 307 la cererea către index.html
 // Servește /glosar/ și /dictionar/ (+ fișierele de verificare) pe fiecare domeniu al rețelei AiVenture
 // din aceleași fișiere (folderul public/, Workers Static Assets). Un domeniu primește paginile doar dacă
 // are rută către acest Worker (vezi wrangler.jsonc). Rutele sunt pe căi, deci nu intră în conflict cu
@@ -21,11 +21,11 @@ export default {
     const known = path.startsWith('/glosar/') || path.startsWith('/dictionar/');
     if (!known) return fetch(request); // în afara căilor noastre: trecem mai departe spre origine
     const assetUrl = new URL(request.url);
-    assetUrl.pathname = isTemplate(path) ? path + 'index.html' : path;
+    // Workers Static Assets rezolvă singur /glosar/ -> public/glosar/index.html (cerere pe index.html ar da redirect 307)
     const res = await env.ASSETS.fetch(new Request(assetUrl, request));
-    if (res.status === 404) return fetch(request);
+    if (res.status !== 200) return fetch(request); // 404, redirect sau altceva: trecem spre origine, nu servim corp gol
     const h = new Headers(res.headers);
-    h.set('x-aiventure-glosar', '1.0');
+    h.set('x-aiventure-glosar', '1.1');
     if (isTemplate(path)) {
       let html = await res.text();
       html = html.replaceAll('%%ORIGIN%%', url.origin).replaceAll('%%DOMAIN%%', url.hostname);
