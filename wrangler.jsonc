@@ -4,9 +4,17 @@
   "main": "worker/index.js",
   "compatibility_date": "2026-10-01",
   "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
-  // Faza 1 (test): doar b2b-ai-library.org. Domeniile se adaugă pe rând, după ce testul trece.
+  // Faza 2 (30 oct 2026): b2b-ai-library.org (testat), 3webobs.com, ai-lens.eu, aiventure.ro, 5thelement.ai. Restul rețelei se adaugă pe rând.
   "routes": [
     { "pattern": "b2b-ai-library.org/glosar*", "zone_name": "b2b-ai-library.org" },
-    { "pattern": "b2b-ai-library.org/dictionar*", "zone_name": "b2b-ai-library.org" }
+    { "pattern": "b2b-ai-library.org/dictionar*", "zone_name": "b2b-ai-library.org" },
+    { "pattern": "3webobs.com/glosar*", "zone_name": "3webobs.com" },
+    { "pattern": "3webobs.com/dictionar*", "zone_name": "3webobs.com" },
+    { "pattern": "ai-lens.eu/glosar*", "zone_name": "ai-lens.eu" },
+    { "pattern": "ai-lens.eu/dictionar*", "zone_name": "ai-lens.eu" },
+    { "pattern": "aiventure.ro/glosar*", "zone_name": "aiventure.ro" },
+    { "pattern": "aiventure.ro/dictionar*", "zone_name": "aiventure.ro" },
+    { "pattern": "5thelement.ai/glosar*", "zone_name": "5thelement.ai" },
+    { "pattern": "5thelement.ai/dictionar*", "zone_name": "5thelement.ai" }
   ]
 }
